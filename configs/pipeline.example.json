@@ -1,0 +1,15 @@
+{
+  "input_path": "eval/dataset/test_data.jsonl",
+  "prediction_output_path": "runs/predictions/searchshortqa-test.jsonl",
+  "evaluation_output_path": "runs/evaluations/searchshortqa-test.jsonl",
+  "base_url": "127.0.0.1:8000",
+  "model_name": "search_agent-RL-step20-ckpt",
+  "grader_base_url": "127.0.0.1:8000",
+  "grader_model_name": "Qwen2.5-32B-Instruct",
+  "mode": "agent",
+  "top_k": 5,
+  "concurrent": 64,
+  "judge_concurrent": 128,
+  "max_assistant_turns": 10,
+  "max_user_turns": 10
+}

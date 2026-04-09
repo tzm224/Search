@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "search_agent"
+version = "0.1.0"
+description = "A projectized search-augmented short-form QA evaluation toolkit."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "ddgs>=9.0.0",
+  "openai>=1.30.0",
+  "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[project.scripts]
+search_agent = "search_agent.cli:main"
+
+[tool.setuptools]
+packages = ["search_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
